@@ -1,6 +1,6 @@
 function CharacterPage() {
 	return (
-		<div className="battle-page">
+		<div className="character-page">
 			<>
 				<div>"Тут буде персонаж"</div>
 			</>

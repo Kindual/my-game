@@ -5,6 +5,7 @@ import HomePage from './pages/home/homePage';
 import Loader from './comonents/loader';
 import BattlePage from './pages/battlepage/battlePage';
 import CharacterPage from './pages/character/characterPage';
+import SkillsPage from './pages/skills/skillsPage';
 
 function App() {
 	return (
@@ -31,6 +32,14 @@ function App() {
 					element={
 						<Suspense fallback={<Loader />}>
 							<CharacterPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/skills"
+					element={
+						<Suspense fallback={<Loader />}>
+							<SkillsPage />
 						</Suspense>
 					}
 				/>
