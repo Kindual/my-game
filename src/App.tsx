@@ -1,21 +1,45 @@
-// import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Suspense } from 'react';
-import HomePage from './pages/home/home';
+import HomePage from './pages/home/homePage';
 import Loader from './comonents/loader';
+import BattlePage from './pages/battlepage/battlePage';
+import CharacterPage from './pages/character/characterPage';
+import SkillsPage from './pages/skills/skillsPage';
 
 function App() {
-	// const [count, setCount] = useState(0)
-
 	return (
 		<>
 			<Routes>
 				<Route
 					path="/"
 					element={
-						<Suspense fallback={<Loader/>}>
+						<Suspense fallback={<Loader />}>
 							<HomePage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/game"
+					element={
+						<Suspense fallback={<Loader />}>
+							<BattlePage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/character"
+					element={
+						<Suspense fallback={<Loader />}>
+							<CharacterPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/skills"
+					element={
+						<Suspense fallback={<Loader />}>
+							<SkillsPage />
 						</Suspense>
 					}
 				/>
